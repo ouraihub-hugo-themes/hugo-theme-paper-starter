@@ -271,16 +271,25 @@ pnpm build
 
 ### Update Theme
 
+**自动更新**：
+- 每次部署时自动使用最新版本主题
+- 无需手动操作
+
+**手动更新本地**（可选）：
 ```bash
-# Update to latest version
+# 更新到最新版本
 hugo mod get -u
 
-# Clean module cache
-hugo mod clean
+# 测试
+hugo server
 
-# Tidy dependencies
-hugo mod tidy
+# 提交更新
+git add go.mod go.sum
+git commit -m "chore: 更新主题"
+git push
 ```
+
+详见：[主题更新指南](THEME_UPDATE.md)
 
 ## Multilingual Setup
 
