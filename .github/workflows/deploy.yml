@@ -51,8 +51,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Update Hugo Modules
-        run: hugo mod get -u
+      - name: Update Hugo Modules to latest
+        run: |
+          hugo mod get -u github.com/ouraihub-hugo-themes/hugo-theme-paper-dist@latest
+          hugo mod tidy
 
       - name: Build site
         run: hugo --minify --gc
