@@ -38,6 +38,19 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-hugomod-
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Install dependencies
+        run: pnpm install
+
       - name: Update Hugo Modules
         run: hugo mod get -u
 
@@ -45,6 +58,9 @@ jobs:
         run: hugo --minify --gc
         env:
           HUGO_ENVIRONMENT: production
+
+      - name: Generate search index
+        run: pnpm run pagefind
 
       - name: Deploy to hugopaper.github.io
         uses: peaceiris/actions-gh-pages@v4
