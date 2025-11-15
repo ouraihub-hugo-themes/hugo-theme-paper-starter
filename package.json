@@ -1,0 +1,37 @@
+{
+  "name": "hugo-paper-starter",
+  "version": "1.0.0",
+  "description": "A quick start template for Hugo Paper theme",
+  "type": "module",
+  "scripts": {
+    "dev": "hugo server",
+    "dev:debug": "hugo server --logLevel debug --disableFastRender",
+    "pagefind": "pagefind --site public",
+    "build": "hugo --minify --gc && pnpm run pagefind",
+    "preview": "pnpm run build && hugo server --disableLiveReload",
+    "new-post": "tsx scripts/new-post.ts",
+    "quick-post": "tsx scripts/quick-post.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "pagefind": "^1.4.0",
+    "tsx": "^4.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ouraihub-hugo-themes/hugo-theme-paper-starter.git"
+  },
+  "keywords": [
+    "hugo",
+    "theme",
+    "blog",
+    "starter"
+  ],
+  "author": "OurAIHub",
+  "license": "MIT"
+}

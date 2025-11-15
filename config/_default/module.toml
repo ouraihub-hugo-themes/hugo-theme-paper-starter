@@ -1,0 +1,5 @@
+# Hugo Paper Theme - Module Configuration
+# This file configures Hugo Modules for theme management
+
+[[imports]]
+path = "github.com/ouraihub-hugo-themes/hugo-theme-paper-dist"

@@ -1,0 +1,30 @@
+# Hugo
+public/
+resources/
+*.prof
+*.mem
+_vendor/
+.hugo_build.lock
+
+# Build logs
+*.log
+build*.log
+
+# Node
+node_modules/
+package-lock.json
+yarn.lock
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+
+# Note: go.mod and go.sum should be committed to lock dependencies
