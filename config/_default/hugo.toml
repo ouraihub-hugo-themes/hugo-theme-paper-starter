@@ -33,12 +33,10 @@ baseName = "index"
 
 # Minify Configuration
 [minify]
+disableJSON = true  # 禁用 JSON 压缩，避免搜索索引损坏
   [minify.tdewolff]
     [minify.tdewolff.html]
       keepWhitespace = false
-    [minify.tdewolff.json]
-      # Disable JSON minification to avoid parsing errors
-      precision = 0
 
 # Server
 [server]
