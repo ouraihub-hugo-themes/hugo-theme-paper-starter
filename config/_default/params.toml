@@ -13,7 +13,7 @@ postPerIndex = 4  # 首页显示的文章数量
 # 主题配置
 [theme]
 defaultTheme = "light"  # light or dark
-switchTheme = true      # 是否显示主题切换按钮
+lightAndDarkMode = true # 是否显示主题切换按钮
 
 # Header 配置
 [header]
