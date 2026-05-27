@@ -50,6 +50,9 @@ linkTitle = "Send an email"
 [comments]
 enable = false           # 是否启用评论
 provider = "giscus"      # 评论提供商：giscus
+lazyload = true          # 懒加载评论
+
+[comments.giscus]
 repo = ""                # GitHub 仓库（格式：username/repo）
 repoId = ""              # GitHub 仓库 ID
 category = ""            # Discussion 分类
@@ -58,7 +61,8 @@ mapping = "pathname"     # 页面与 Discussion 的映射方式
 strict = "0"             # 严格匹配
 reactionsEnabled = "1"   # 启用反应
 emitMetadata = "0"       # 发送元数据
-inputPosition = "bottom" # 输入框位置：top 或 bottom
+inputPosition = "bottom" # 输入框位置
+lang = "en"              # 语言
 
 # SEO 配置
 [seo]
